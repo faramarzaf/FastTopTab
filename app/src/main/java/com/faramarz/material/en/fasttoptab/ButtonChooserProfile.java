@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -29,6 +30,8 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
     private String mValue;
     private int mValueTextColor;
     private int mPressedTextColor;
+    private int strokeWidth;
+    private GradientDrawable gd = new GradientDrawable();
 
     // Variables
     private Drawable mInitialBackgroundDrawable;
@@ -77,10 +80,23 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
             mValue = a.getString(R.styleable.ButtonChooserProfile_ftt_ButtonValueText);
             mValueTextColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_ButtonValueTextColor, resources.getColor(R.color.black));
             mPressedTextColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_ButtonPressedTextColor, Color.WHITE);
-
+            strokeWidth = a.getInteger(R.styleable.ButtonChooserProfile_ftt_StrokeWidth, 0);
         } finally {
             a.recycle();
         }
+    }
+
+    private void setStrokeWidth() {
+/*        Drawable view = ContextCompat.getDrawable(getContext(), R.drawable.background_shape_preset_button__pressed);
+        GradientDrawable drawable = (GradientDrawable)view.getBackground();
+        drawable.setStroke(3, Color.RED);*/
+
+    /*    Drawable v = mInitialBackgroundDrawable;
+        GradientDrawable drawable = (GradientDrawable) v;
+        drawable.setStroke(strokeWidth, Color.BLACK);*/
+
+        SomeDrawable drawable = new SomeDrawable(1, Color.BLACK, 0);
+        setBackgroundDrawable(drawable);
     }
 
     // Template method
@@ -88,6 +104,7 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
         inflateView();
         bindView();
         setCustomTouchListener();
+        setStrokeWidth();
     }
 
     protected void inflateView() {
@@ -143,12 +160,13 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
     public void setCheckedState() {
         setBackgroundResource(R.drawable.background_shape_preset_button__pressed);
         mValueTextView.setTextColor(mPressedTextColor);
+        setStrokeWidth();
     }
 
     public void setNormalState() {
         setBackgroundDrawable(mInitialBackgroundDrawable);
         mValueTextView.setTextColor(mValueTextColor);
-
+        setStrokeWidth();
     }
 
     public String getValue() {

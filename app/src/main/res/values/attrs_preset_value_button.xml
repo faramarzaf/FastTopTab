@@ -4,5 +4,6 @@
         <attr name="ftt_ButtonValueText" format="string"/>
         <attr name="ftt_ButtonValueTextColor" format="color"/>
         <attr name="ftt_ButtonPressedTextColor" format="color"/>
+        <attr name="ftt_StrokeWidth" format="integer"/>
     </declare-styleable>
 </resources>
