@@ -9,6 +9,7 @@
 
     <com.faramarz.material.en.fasttoptab.PresetRadioGroup
         android:id="@+id/preset_time_radio_group"
+        android:layout_margin="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -20,6 +21,7 @@
             android:id="@+id/chooser_statistic"
             style="@style/PresetLayoutButton"
             app:ftt_StrokeWidth="2"
+            app:ftt_SelectedTabColor="@color/black"
             app:ftt_StrokeColor="#DA0839"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
             app:ftt_StrokeColor="#DA0839"
             app:ftt_StrokeWidth="2"
             android:gravity="center"
+            app:ftt_SelectedTabColor="@color/black"
             style="@style/PresetLayoutButton"
             app:ftt_ButtonPressedTextColor="#FFA900"
             app:ftt_ButtonValueText="dfhdnngn"
@@ -52,6 +55,7 @@
             android:layout_gravity="center"
             app:ftt_StrokeColor="#DA0839"
             app:ftt_StrokeWidth="2"
+            app:ftt_SelectedTabColor="@color/black"
             android:gravity="center"
             style="@style/PresetLayoutButton"
             app:ftt_ButtonPressedTextColor="#F54F00"

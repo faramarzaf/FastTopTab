@@ -32,6 +32,7 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
     private int mPressedTextColor;
     private int strokeWidth;
     private int strokeColor;
+    private int selectedTabColor;
     private GradientDrawable gd = new GradientDrawable();
 
     // Variables
@@ -83,6 +84,7 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
             mPressedTextColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_ButtonPressedTextColor, Color.WHITE);
             strokeWidth = a.getInteger(R.styleable.ButtonChooserProfile_ftt_StrokeWidth, 0);
             strokeColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_StrokeColor, Color.BLACK);
+            selectedTabColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_SelectedTabColor, Color.WHITE);
         } finally {
             a.recycle();
         }
@@ -97,7 +99,7 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
         GradientDrawable drawable = (GradientDrawable) v;
         drawable.setStroke(strokeWidth, Color.BLACK);*/
 
-        SomeDrawable drawable = new SomeDrawable(strokeWidth, strokeColor, 0);
+        SomeDrawable drawable = new SomeDrawable( strokeWidth, strokeColor, 0);
         setBackgroundDrawable(drawable);
     }
 
@@ -161,6 +163,7 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
 
     public void setCheckedState() {
         setBackgroundResource(R.drawable.background_shape_preset_button__pressed);
+        setBackgroundColor(selectedTabColor);
         mValueTextView.setTextColor(mPressedTextColor);
     }
 

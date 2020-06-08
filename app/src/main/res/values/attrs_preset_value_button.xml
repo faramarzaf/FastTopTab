@@ -6,5 +6,6 @@
         <attr name="ftt_ButtonPressedTextColor" format="color"/>
         <attr name="ftt_StrokeWidth" format="integer"/>
         <attr name="ftt_StrokeColor" format="color"/>
+        <attr name="ftt_SelectedTabColor" format="color"/>
     </declare-styleable>
 </resources>
