@@ -91,14 +91,6 @@ public class FTTTab extends RelativeLayout implements RadioCheckable {
     }
 
     private void setStrokeWidth() {
-/*        Drawable view = ContextCompat.getDrawable(getContext(), R.drawable.background_shape_preset_button__pressed);
-        GradientDrawable drawable = (GradientDrawable)view.getBackground();
-        drawable.setStroke(3, Color.RED);*/
-
-    /*    Drawable v = mInitialBackgroundDrawable;
-        GradientDrawable drawable = (GradientDrawable) v;
-        drawable.setStroke(strokeWidth, Color.BLACK);*/
-
         SomeDrawable drawable = new SomeDrawable( strokeWidth, strokeColor, 0);
         setBackgroundDrawable(drawable);
     }
