@@ -1,6 +1,5 @@
-package com.faramarz.material.en.fasttoptab;
+package com.faramarz.material.en.FastTopTab;
 
-import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 
 public class SomeDrawable extends GradientDrawable {

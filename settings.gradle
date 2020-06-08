@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':fasttoptab'
 rootProject.name='FastTopTab'

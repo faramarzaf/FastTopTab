@@ -1,4 +1,4 @@
-package com.faramarz.material.en.fasttoptab;
+package com.faramarz.material.en.FastTopTab;
 
 import android.annotation.SuppressLint;
 import android.os.Build;

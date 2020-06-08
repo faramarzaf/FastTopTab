@@ -1,4 +1,4 @@
-package com.faramarz.material.en.fasttoptab;
+package com.faramarz.material.en.FastTopTab;
 
 import android.content.Context;
 import android.content.res.TypedArray;

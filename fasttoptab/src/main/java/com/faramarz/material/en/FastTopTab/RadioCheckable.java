@@ -1,4 +1,4 @@
-package com.faramarz.material.en.fasttoptab;
+package com.faramarz.material.en.FastTopTab;
 
 import android.view.View;
 import android.widget.Checkable;
