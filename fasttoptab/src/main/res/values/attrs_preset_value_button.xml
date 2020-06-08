@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ButtonChooserProfile">
+    <declare-styleable name="FTTTab">
         <attr name="ftt_ButtonValueText" format="string"/>
         <attr name="ftt_ButtonValueTextColor" format="color"/>
         <attr name="ftt_ButtonPressedTextColor" format="color"/>

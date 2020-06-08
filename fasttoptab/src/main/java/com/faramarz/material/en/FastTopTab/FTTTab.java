@@ -19,7 +19,7 @@ import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 
-public class ButtonChooserProfile extends RelativeLayout implements RadioCheckable {
+public class FTTTab extends RelativeLayout implements RadioCheckable {
     // Views
     private TextView mValueTextView;
 
@@ -46,26 +46,26 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
     // Constructors
     //================================================================================
 
-    public ButtonChooserProfile(Context context) {
+    public FTTTab(Context context) {
         super(context);
         setupView();
     }
 
-    public ButtonChooserProfile(Context context, AttributeSet attrs) {
+    public FTTTab(Context context, AttributeSet attrs) {
         super(context, attrs);
         parseAttributes(attrs);
         setupView();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    public ButtonChooserProfile(Context context, AttributeSet attrs, int defStyleAttr) {
+    public FTTTab(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         parseAttributes(attrs);
         setupView();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public ButtonChooserProfile(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public FTTTab(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         parseAttributes(attrs);
         setupView();
@@ -76,15 +76,15 @@ public class ButtonChooserProfile extends RelativeLayout implements RadioCheckab
     //================================================================================
 
     private void parseAttributes(AttributeSet attrs) {
-        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ButtonChooserProfile, 0, 0);
+        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.FTTTab, 0, 0);
         Resources resources = getContext().getResources();
         try {
-            mValue = a.getString(R.styleable.ButtonChooserProfile_ftt_ButtonValueText);
-            mValueTextColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_ButtonValueTextColor, resources.getColor(R.color.black));
-            mPressedTextColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_ButtonPressedTextColor, Color.WHITE);
-            strokeWidth = a.getInteger(R.styleable.ButtonChooserProfile_ftt_StrokeWidth, 0);
-            strokeColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_StrokeColor, Color.BLACK);
-            selectedTabColor = a.getColor(R.styleable.ButtonChooserProfile_ftt_SelectedTabColor, Color.WHITE);
+            mValue = a.getString(R.styleable.FTTTab_ftt_ButtonValueText);
+            mValueTextColor = a.getColor(R.styleable.FTTTab_ftt_ButtonValueTextColor, resources.getColor(R.color.black));
+            mPressedTextColor = a.getColor(R.styleable.FTTTab_ftt_ButtonPressedTextColor, Color.WHITE);
+            strokeWidth = a.getInteger(R.styleable.FTTTab_ftt_StrokeWidth, 0);
+            strokeColor = a.getColor(R.styleable.FTTTab_ftt_StrokeColor, Color.BLACK);
+            selectedTabColor = a.getColor(R.styleable.FTTTab_ftt_SelectedTabColor, Color.WHITE);
         } finally {
             a.recycle();
         }
