@@ -15,19 +15,21 @@ dependencies {
 	}
 ```
 
+**In your xml**
+
 ```xml
 
-<com.faramarz.material.en.FastTopTab.PresetRadioGroup
-        android:id="@+id/preset_time_radio_group"
+ <com.faramarz.material.en.FastTopTab.PresetRadioGroup
+        android:id="@+id/preset_radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="horizontal"
         android:weightSum="3"
-        app:ftt_RadioCheckedId="@+id/chooser_my_account">
+        app:ftt_RadioCheckedId="@+id/tab1">
 
         <com.faramarz.material.en.FastTopTab.FTTTab
-            android:id="@+id/chooser_statistic"
+            android:id="@+id/tab1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,7 +45,7 @@ dependencies {
             app:ftt_StrokeWidth="2" />
 
         <com.faramarz.material.en.FastTopTab.FTTTab
-            android:id="@+id/chooser_downloaded"
+            android:id="@+id/tab2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,7 +61,7 @@ dependencies {
             app:ftt_StrokeWidth="2" />
 
         <com.faramarz.material.en.FastTopTab.FTTTab
-            android:id="@+id/chooser_my_account"
+            android:id="@+id/tab3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -76,5 +78,20 @@ dependencies {
 
     </com.faramarz.material.en.FastTopTab.PresetRadioGroup>
 
+```
 
+**Java usage**
+
+```java
+    PresetRadioGroup presetRadioGroup;
+ 	presetRadioGroup = findViewById(R.id.preset_radio_group);
+		
+		presetRadioGroup.setOnCheckedChangeListener(new PresetRadioGroup.OnCheckedChangeListener() {
+            		 @Override
+            		 public void onCheckedChanged(View radioGroup, View radioButton, boolean isChecked, int checkedId) {
+               		 String checked = ((FTTTab) radioButton).getValue();
+                	 Toast.makeText(MainActivity.this, checked, Toast.LENGTH_SHORT).show();
+            }
+        });
+	
 ```
